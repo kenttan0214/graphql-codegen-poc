@@ -30,7 +30,7 @@ Option 2
       handler: 'src/handler/server.handler',
       events: [
         {
-          htthttpApip: {},
+          httpApi: {},
         },
       ]
     }
