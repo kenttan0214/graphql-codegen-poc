@@ -10,7 +10,8 @@
     "lint:fix": "eslint --ext .ts . --ignore-path .gitignore --fix",
     "local": "env-cmd -e local sls offline start",
     "local:debug": "env-cmd -e local npm run debug",
-    "debug": "node --inspect node_modules/serverless/bin/serverless offline -s dev"
+    "debug": "node --inspect node_modules/serverless/bin/serverless offline -s dev",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,9 @@
     "graphql": "^16.6.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "3.3.0",
+    "@graphql-codegen/typescript": "3.0.3",
+    "@graphql-codegen/typescript-resolvers": "3.2.0",
     "@types/jest": "^29.4.0",
     "@types/serverless": "^3.12.11",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
@@ -56,6 +60,7 @@
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
     "webpack": "^5.76.0",
-    "webpack-node-externals": "^3.0.0"
+    "webpack-node-externals": "^3.0.0",
+    "@graphql-codegen/typescript-document-nodes": "3.0.3"
   }
 }

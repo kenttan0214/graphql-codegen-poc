@@ -30,4 +30,5 @@ module.exports = {
     ],
     eqeqeq: 2,
   },
+  ignorePatterns: ['src/model/gql/*.ts'],
 };

@@ -1,4 +1,6 @@
-const resolvers = {
+import { Resolvers } from '../model/gql/schema';
+
+const resolvers: Resolvers = {
   Query: {
     upcomingTodo: () => {
       return [
