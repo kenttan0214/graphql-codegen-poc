@@ -22,8 +22,8 @@ declare module '*.graphql' {
 
 4. Save the file.
 
-5. Then Add the follow configuration to the `tsconfig.json` file:
-```
+5. Then Add the following configuration to the `tsconfig.json` file:
+```json
 {
   "compilerOptions": {
     ...
@@ -33,4 +33,21 @@ declare module '*.graphql' {
 }
 ```
 
-6. That's it! Now Typescript will know how to handle .graphql files in your project. You can import them like any other module and use them as DocumentNodes.
+6. Then add the following configuration to the `webpack.config.js` file:
+```javascript
+module.exports = {
+  ...
+  module: {
+    ...
+    rules: [
+      ...
+      {
+        test: /\.graphql$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
+      },
+    ]
+}
+```
+
+7. That's it! Now Typescript will know how to handle .graphql files in your project. You can import them like any other module and use them as DocumentNodes.
