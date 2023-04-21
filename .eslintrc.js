@@ -30,5 +30,6 @@ module.exports = {
     ],
     eqeqeq: 2,
   },
+  // to skip the auto generated file
   ignorePatterns: ['src/model/gql/*.ts'],
 };
