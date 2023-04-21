@@ -2,13 +2,13 @@
 
 This repository is a proof-of-concept (POC) demonstrating how to setup the GraphQL Code Generator to auto generate the GraphQL Resolvers Typescript type.
 
-Manually maintaining the GraphQL operation types or the complete absence of types can lead to many issues:
+## Why Generate Types?
+Manually maintaining GraphQL operation types, or the complete absence of types, can lead to many issues including outdated typing, typos, and partial typing of data. By automating and generating the typing of GraphQL operations, you can improve the developer experience and the stability of the stack.
 
-1. outdated typing (regarding the current Schema)
-2. typos
-3. partial typing of data (not all Schema's fields has a corresponding type)
+## How It Works
+The GraphQL Code Generator uses a schema and a set of documents (queries, mutations, subscriptions) to generate Typescript types for GraphQL operations. In this POC, we use a local schema and a set of sample documents to generate the resolver types.
 
-For this reason, automating and generating the typing of GraphQL operations will both improve the developer experience and stability of the stack.
+The generated resolver types are based on the schema and the documents, and include types for queries, mutations, and subscriptions. These types are then used by the resolver functions to ensure type safety.
 
 ## Available Scripts
 
