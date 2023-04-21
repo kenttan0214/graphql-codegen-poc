@@ -1,0 +1,61 @@
+{
+  "name": "graphql-dynamodb-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "format": "prettier --single-quote --write .",
+    "lint:ts": "eslint --ext .ts . --ignore-path .gitignore",
+    "lint:fix": "eslint --ext .ts . --ignore-path .gitignore --fix",
+    "local": "env-cmd -e local sls offline start",
+    "local:debug": "env-cmd -e local npm run debug",
+    "debug": "node --inspect node_modules/serverless/bin/serverless offline -s dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenttan0214/graphql-dynamodb-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenttan0214/graphql-dynamodb-poc/issues"
+  },
+  "homepage": "https://github.com/kenttan0214/graphql-dynamodb-poc#readme",
+  "dependencies": {
+    "@apollo/server": "^4.6.0",
+    "@as-integrations/aws-lambda": "^2.0.1",
+    "@aws-sdk/client-dynamodb": "^3.315.0",
+    "@aws-sdk/lib-dynamodb": "^3.315.0",
+    "@aws-sdk/types": "^3.310.0",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/serverless": "^3.12.11",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.4.2",
+    "jest-dynalite": "^3.6.1",
+    "jest-junit": "^16.0.0",
+    "prettier": "^2.8.4",
+    "rimraf": "^5.0.0",
+    "serverless": "^3.27.0",
+    "serverless-iam-roles-per-function": "^3.2.0",
+    "serverless-offline": "^12.0.4",
+    "serverless-prune-plugin": "^2.0.2",
+    "serverless-webpack": "^5.11.0",
+    "ts-jest": "^29.0.5",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.76.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

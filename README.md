@@ -1,0 +1,1 @@
+https://medium.com/serverless-transformation/the-awesome-libraries-of-aws-typescript-serverless-developers-c50e859a0ef0
