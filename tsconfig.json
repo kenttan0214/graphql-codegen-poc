@@ -10,7 +10,6 @@
     "target": "es2019",
     "outDir": ".build",
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types", "src/@types"]
   },
   "include": ["./**/*.ts", "webpack.config.js"],
   "exclude": [

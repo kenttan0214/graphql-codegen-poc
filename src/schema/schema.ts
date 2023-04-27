@@ -1,3 +1,4 @@
+const todoSchema = `
 type Todo {
   todoId: String
   todoContent: String
@@ -10,3 +11,6 @@ type Query {
 schema {
   query: Query
 }
+`;
+
+export default todoSchema;
