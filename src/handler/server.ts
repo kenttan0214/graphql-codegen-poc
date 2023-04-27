@@ -4,7 +4,7 @@ import { ApolloServerPluginLandingPageDisabled } from '@apollo/server/plugin/dis
 import { startServerAndCreateLambdaHandler, handlers } from '@as-integrations/aws-lambda';
 import { IS_OFFLINE } from '../constant';
 import resolvers from '../resolver';
-import typeDefs from '../schema/schema.graphql';
+import typeDefs from '../schema';
 
 /**
  * Loads landing page only on local env, disables landing page on server env

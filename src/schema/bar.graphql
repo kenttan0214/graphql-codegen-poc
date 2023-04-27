@@ -1,0 +1,12 @@
+type Bar {
+  id: String
+  content: String
+}
+
+type Query {
+  bar: [Bar]
+}
+
+schema {
+  query: Query
+}

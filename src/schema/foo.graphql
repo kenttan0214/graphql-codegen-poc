@@ -1,0 +1,12 @@
+type Foo {
+  id: String
+  content: String
+}
+
+type Query {
+  foo: [Foo]
+}
+
+schema {
+  query: Query
+}

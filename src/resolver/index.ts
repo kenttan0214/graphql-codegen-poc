@@ -1,33 +1,8 @@
+import { mergeResolvers } from '@graphql-tools/merge';
 import { Resolvers } from '../model/gql/schema';
+import fooResolver from './foo';
+import barResolver from './bar';
 
-const resolvers: Resolvers = {
-  Query: {
-    upcomingTodo: () => {
-      return [
-        {
-          todoId: '1',
-          todoContent: 'content 1',
-        },
-        {
-          todoId: '2',
-          todoContent: 'content 2',
-        },
-        {
-          todoId: '3',
-          todoContent: 'content 3',
-        },
-      ];
-    },
-  },
-  Todo: {
-    todoContent: (parent) => {
-      if (parent.todoId === '2') {
-        return 'override content';
-      }
-
-      return parent.todoContent;
-    },
-  },
-};
+const resolvers: Resolvers = mergeResolvers([fooResolver, barResolver]);
 
 export default resolvers;
